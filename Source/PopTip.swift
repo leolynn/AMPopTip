@@ -119,7 +119,7 @@ open class PopTip: UIView {
   /// The `UIColor` for the poptip's bordedr
   @objc open dynamic var borderColor = UIColor.clear
   /// The width for the poptip's border
-  @objc open dynamic var borderWidth = CGFloat(5.0)
+  @objc open dynamic var borderWidth = CGFloat(1.0)
   /// The `Double` with the poptip's border radius
   @objc open dynamic var cornerRadius = CGFloat(10.0)
   /// The `BOOL` that determines wether the poptip is rounded. If set to `true` the radius will equal `frame.height / 2`
@@ -456,6 +456,7 @@ open class PopTip: UIView {
       arrowPosition = dimensions.1
       let anchor = arrowPosition.x / rect.size.width
       textBounds.origin = CGPoint(x: textBounds.origin.x, y: textBounds.origin.y + arrowSize.height)
+      layer.borderWidth = borderWidth
       layer.anchorPoint = CGPoint(x: anchor, y: 0)
       layer.position = CGPoint(x: layer.position.x + rect.width * anchor, y: layer.position.y - rect.height / 2)
     case .left:
