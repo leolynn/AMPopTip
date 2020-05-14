@@ -119,7 +119,7 @@ open class PopTip: UIView {
   /// The `UIColor` for the poptip's bordedr
   @objc open dynamic var borderColor = UIColor.clear
   /// The width for the poptip's border
-  @objc open dynamic var borderWidth = CGFloat(1.0)
+  @objc open dynamic var borderWidth = CGFloat(5.0)
   /// The `Double` with the poptip's border radius
   @objc open dynamic var cornerRadius = CGFloat(10.0)
   /// The `BOOL` that determines wether the poptip is rounded. If set to `true` the radius will equal `frame.height / 2`
@@ -926,4 +926,10 @@ fileprivate extension UIEdgeInsets {
   var vertical: CGFloat {
     return self.top + self.bottom
   }
+}
+
+struct PopTip_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }
