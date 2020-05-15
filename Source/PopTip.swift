@@ -456,7 +456,6 @@ open class PopTip: UIView {
       arrowPosition = dimensions.1
       let anchor = arrowPosition.x / rect.size.width
       textBounds.origin = CGPoint(x: textBounds.origin.x, y: textBounds.origin.y + arrowSize.height)
-      layer.borderWidth = borderWidth
       layer.anchorPoint = CGPoint(x: anchor, y: 0)
       layer.position = CGPoint(x: layer.position.x + rect.width * anchor, y: layer.position.y - rect.height / 2)
     case .left:
